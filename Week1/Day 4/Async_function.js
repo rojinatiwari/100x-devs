@@ -52,4 +52,4 @@ for (let i =0;i<1000000;i++)
 }
 
 console.log("hi there 2");
-//fetch-to fetch data from an API 
+//fetch-to fetch data from an API  
