@@ -1,0 +1,15 @@
+{
+  "name": "day-2",
+  "version": "1.0.0",
+  "description": "ECMAScript -- scripting language specification on which javaScript is based\r javascript -- programming language that conforms to the ECMAScript specification\r node.js -- runtime environment that allows you to run JavaScript code outside of a web browser\r bun -- JavaScript runtime like node.js but faster and more efficient",
+  "main": "HTTP_Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
