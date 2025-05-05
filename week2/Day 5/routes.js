@@ -1,12 +1,12 @@
-//creating a node server using http module
-const http = require("http");
-const fs = require("fs");
-const server = http.createServer((req, res) => {
-  //   console.log(req.url, req.method, req.headers);
-  // process.exit();
-  const url = req.url; //parsing the url
-  const method = req.method;
-  if (url == "/") {
+  
+  // module in node.js
+  const fs = require("fs");
+ const requestHandler = (req, res) => {
+
+    const url = req.url;
+    const method = req.method;
+
+    if (url == "/") {
     res.write("<html>");
     res.write("<head><title>Enter Message</title></head>");
     res.write(
@@ -15,6 +15,7 @@ const server = http.createServer((req, res) => {
     res.write("</html>");
     return res.end();
   }
+
 
   if (url == "/message" && method === "POST") {
     const body = [];
@@ -43,6 +44,15 @@ res.statusCode = 302;
   res.write("<body><h1>Hello from my Node.js Server!</h1></body>");
   res.write("</html>");
   res.end();
-});
 
-server.listen(3000);
+ };
+
+//  module.exports = requestHandler;
+
+// module.exports = {
+//     handler: requestHandler,
+//     someText: 'some hard coded text'
+// };
+
+exports.handler = requestHandler;
+exports.someText = 'some hard coded text';
